@@ -1,0 +1,140 @@
+/* Importation de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --bleu-ciel: #58cced;
+    --vert-pomme: #71c837;
+    --jaune-soleil: #ffcc00;
+    --orange: #ff7f00;
+    --rose-bonbon: #ff4081;
+    --fond-clair: #f8f8f8;
+    --texte-sombre: #333;
+    --police-principale: 'Fredoka One', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--police-principale);
+}
+
+body {
+    background-color: var(--fond-clair);
+    color: var(--texte-sombre);
+}
+
+/* Navigation */
+header {
+    background: linear-gradient(90deg, var(--bleu-ciel), var(--vert-pomme));
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--jaune-soleil);
+}
+
+/* Icônes sociales */
+.social-icons i {
+    color: white;
+    margin: 0 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Grille des jeux populaires */
+.popular-games {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.game-item {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+}
+
+.game-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Sidebar */
+.sidebar {
+    padding: 20px;
+    background: var(--jaune-soleil);
+    margin-top: 20px;
+}
+
+.widget h3 {
+    color: var(--texte-sombre);
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    background: var(--bleu-ciel);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
